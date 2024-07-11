@@ -15,7 +15,6 @@ homeFunctions.displayHeroImages = async () => {
     (selectedItems) => {
       heroImages.innerHTML = "";
       utils.displayImages(heroImages, selectedItems, 200);
-      console.log(selectedItems)
     },
   );
 };
