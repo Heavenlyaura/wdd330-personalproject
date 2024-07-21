@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./js/main.js" type="module"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Popcorn & Film | Home Page</title>
   </head>
   <body>
@@ -18,11 +18,36 @@
         </ul>
       </nav>
     </header>
-
     <div class="hero">
       <h3>Now Playing</h3>
       <div class="heroImgs"></div>
     </div>
-    <footer></footer>
+    <main>
+      <section class="searchSection">
+        <form id="myForm">
+          <label for="movies">
+            <input type="radio" id="movies" name="searchOptions" value="movies" />
+            Movies
+          </label>
+          <label for="tvshows">
+            <input type="radio" id="tvshows" name="searchOptions" value="tvshows" />
+            TV Shows
+          </label>
+          <div class="searchbar">
+            <input type="search" id="search">
+            <input id="searchbtn" type="submit" value="🔎">
+          </div>
+        </form>
+      </section>
+      <section>
+        <h3>Popular Movies</h3>
+        <div class="popularMovies"></div>
+      </section>
+    </main>
+    <footer id="footer">
+      <p>Popcorn & Film</p>
+      <p>Copyright &copy; 2022</p>
+      
+    </footer>
   </body>
 </html>
