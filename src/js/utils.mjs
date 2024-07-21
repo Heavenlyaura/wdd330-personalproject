@@ -21,8 +21,13 @@ utils.selectRandomItems = function (numOfItems, list, interval, callback) {
   return intervalId;
 };
 
-
-utils.displayImages = (parentElement, arrWithImg, width, displayText) => {
+utils.displayImages = (
+  parentElement,
+  arrWithImg,
+  width,
+  displayText,
+  classList,
+) => {
   arrWithImg.forEach((item) => {
     const div = document.createElement("div");
     const prefix = `https://image.tmdb.org/t/p/w${width}`;
@@ -32,11 +37,16 @@ utils.displayImages = (parentElement, arrWithImg, width, displayText) => {
     const imageSrc = `${prefix}${item.poster_path}`;
     imageElement.setAttribute("src", imageSrc);
     imageElement.setAttribute("alt", item.original_title);
+    if (classList) {
+      imageElement.classList.add(classList);
+      div.classList.add(`div${classList}`)
+    }
+    console.log(item);
     aTag.appendChild(imageElement);
     div.appendChild(aTag);
     parentElement.appendChild(div);
     if (displayText === "info") {
-      displayMovieLinks(parentElement, item);
+      displayMovieLinks(div, item);
     }
   });
 };
@@ -46,8 +56,8 @@ function displayMovieLinks(parentElement, movie) {
   aTag.setAttribute("href", `../movie_detail/index.html?${movie.id}`);
   const pTag = document.createElement("p");
   const pTag2 = document.createElement("p");
-  pTag.textContent = `Movie: ${movie.title};`;
-  pTag2.textContent = `Release Date: ${movie.release_date}`;
+  pTag.textContent = `${movie.title};`;
+  pTag2.textContent = `${movie.release_date}`;
   aTag.appendChild(pTag);
   aTag.appendChild(pTag2);
   parentElement.appendChild(aTag);

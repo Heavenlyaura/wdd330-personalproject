@@ -3,12 +3,120 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  /* Primary Colors */
+  --color-navy-blue: #1d3557;
+  --color-white: #ffffff;
+
+  /* Secondary Colors */
+  --color-light-gray: #f1faee;
+  --color-dark-gray: #333333;
+
+  /* Accent Colors */
+  --color-sky-blue: #457b9d;
+  --color-teal: #2a9d8f;
+
+  /* Neutral Colors */
+  --color-medium-gray: #576b6c;
+  --color-soft-beige: #f4a261;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--color-navy-blue);
+  color: var(--color-white);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.hero {
+  padding: 1rem;
+  background-color: var(--color-light-gray);
+}
+.hero h3 {
+  text-align: center;
+  padding: 1rem;
+}
 .heroImgs {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+  margin: 0 auto;
+}
+.hero_image {
+  /* opacity: 0; */
+  animation: hero_image 1s ease-in-out forwards;
+}
+@keyframes hero_image {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .heroImgs img {
-    width: 150px;
+  width: 200px;
+}
+main {
+  background-color: var(--color-medium-gray);
+}
+.searchSection {
+  padding: 1rem;
+  text-align: center;
+}
+.searchSection input {
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+.popularMovies a {
+  text-decoration: none;
+  color: black;
+  color: var(--color-white);
+}
+#popularMovies h3 {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-white);
+}
+.popularMovies div {
+  width: 100%;
+  text-align: center;
+}
+.popularMovies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+  justify-items: center;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--color-navy-blue);
+  color: var(--color-white);
+}
+
+@media (max-width: 400px) {
+  .divhero_image:nth-child(2), .divhero_image:nth-child(1) {
+    display: none;
+  }
 }
