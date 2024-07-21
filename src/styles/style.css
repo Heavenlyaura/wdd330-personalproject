@@ -55,7 +55,7 @@ nav a {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem 0;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0 auto;
 }
 .hero_image {
@@ -71,7 +71,7 @@ nav a {
   }
 }
 .heroImgs img {
-  width: 200px;
+  width: 100%;
 }
 main {
   background-color: var(--color-medium-gray);
@@ -115,8 +115,15 @@ footer {
   color: var(--color-white);
 }
 
-@media (max-width: 400px) {
-  .divhero_image:nth-child(2), .divhero_image:nth-child(1) {
+@media (max-width: 730px) {
+  .divhero_image:nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .divhero_image:nth-child(2),
+  .divhero_image:nth-child(1) {
     display: none;
   }
 }
