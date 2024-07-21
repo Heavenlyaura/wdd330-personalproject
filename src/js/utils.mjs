@@ -32,7 +32,7 @@ utils.displayImages = (
     const div = document.createElement("div");
     const prefix = `https://image.tmdb.org/t/p/w${width}`;
     const aTag = document.createElement("a");
-    aTag.setAttribute("href", `../movie_detail/index.html?${item.id}`);
+    aTag.setAttribute("href", `../movie_detail/?${item.id}`);
     const imageElement = document.createElement("img");
     const imageSrc = `${prefix}${item.poster_path}`;
     imageElement.setAttribute("src", imageSrc);
