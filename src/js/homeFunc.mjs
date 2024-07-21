@@ -48,7 +48,7 @@ homeFunctions.displayHeroImages = async () => {
     5000,
     (selectedItems) => {
       heroImages.innerHTML = "";
-      utils.displayImages(heroImages, selectedItems, 200);
+      utils.displayImages(heroImages, selectedItems, 200, '', "hero_image");
     },
   );
 };
@@ -60,7 +60,7 @@ homeFunctions.displayPopularMovies = async () => {
     "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
   const popular = await externalServices.getData(url, "json");
   const items = utils.selectRandomItems(
-    6,
+    12,
     popular.results,
     5000,
     (selectedItems) => {
