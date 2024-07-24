@@ -32,14 +32,14 @@ utils.displayImages = (
     const div = document.createElement("div");
     const prefix = `https://image.tmdb.org/t/p/w${width}`;
     const aTag = document.createElement("a");
-    aTag.setAttribute("href", `../movie_detail/?${item.id}`);
+    aTag.setAttribute("href", `../movie_detail/?movie_id=${item.id}`);
     const imageElement = document.createElement("img");
     const imageSrc = `${prefix}${item.poster_path}`;
     imageElement.setAttribute("src", imageSrc);
     imageElement.setAttribute("alt", item.original_title);
     if (classList) {
       imageElement.classList.add(classList);
-      div.classList.add(`div${classList}`)
+      div.classList.add(`div${classList}`);
     }
     console.log(item);
     aTag.appendChild(imageElement);
@@ -49,6 +49,12 @@ utils.displayImages = (
       displayMovieLinks(div, item);
     }
   });
+};
+utils.getParam = (params) => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const product = urlParams.get(params);
+  return product;
 };
 
 function displayMovieLinks(parentElement, movie) {

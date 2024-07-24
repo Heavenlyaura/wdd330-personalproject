@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
+  font-family: "Roboto Condensed", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -43,11 +46,12 @@ nav a {
 }
 .hero {
   padding: 1rem;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-dark-gray);
 }
-.hero h3 {
+.hero h2 {
   text-align: center;
   padding: 1rem;
+  color: --;
 }
 .heroImgs {
   width: 90%;
@@ -73,9 +77,6 @@ nav a {
 .heroImgs img {
   width: 100%;
 }
-main {
-  background-color: var(--color-medium-gray);
-}
 .searchSection {
   padding: 1rem;
   text-align: center;
@@ -87,12 +88,11 @@ main {
 .popularMovies a {
   text-decoration: none;
   color: black;
-  color: var(--color-white);
 }
 #popularMovies h3 {
   text-align: center;
   padding: 1rem;
-  color: var(--color-white);
+  color: black;
 }
 .popularMovies div {
   width: 100%;
@@ -107,12 +107,38 @@ main {
 }
 
 footer {
-  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   padding: 2rem;
   background-color: var(--color-navy-blue);
   color: var(--color-white);
+}
+
+
+
+.movieDetail {
+  padding: 1rem;
+}
+.movieDetail img {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.movieDetail span {
+  font-weight: 700;
+}
+.genre {
+  display: flex;
+  gap: 8px;
+}
+.releaseDate {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movieDetail p {
+  margin-block-end: 10px;
 }
 
 @media (max-width: 730px) {
