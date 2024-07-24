@@ -1,3 +1,6 @@
 import { homeFunctions } from "./homeFunc.mjs";
-homeFunctions.displayHeroImages();
-homeFunctions.displayPopularMovies();
+
+document.addEventListener("DOMContentLoaded", () => {
+  homeFunctions.displayHeroImages();
+  homeFunctions.displayPopularMovies();
+});
