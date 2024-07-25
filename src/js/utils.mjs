@@ -41,7 +41,6 @@ utils.displayImages = (
       imageElement.classList.add(classList);
       div.classList.add(`div${classList}`);
     }
-    console.log(item);
     aTag.appendChild(imageElement);
     div.appendChild(aTag);
     parentElement.appendChild(div);

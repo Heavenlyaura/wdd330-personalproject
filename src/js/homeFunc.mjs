@@ -7,10 +7,8 @@ const homeFunctions = {};
  ************************************************************************************** */
 function movieOrTvShow() {
   const radios = document.getElementsByName("searchOptions");
-  console.log(radios);
   for (const radio of radios) {
     if (radio.checked) {
-      console.log(radio.value);
       return radio.value;
     }
   }
@@ -70,7 +68,6 @@ homeFunctions.displayPopularMovies = async () => {
   );
   setTimeout(function () {
     clearInterval(items);
-    console.log("Interval stopped");
   }, 5000);
 };
 
