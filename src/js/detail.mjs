@@ -10,7 +10,6 @@ export async function getMovieDetails() {
 }
 
 export function buildDetailTemplate(data, parentElement) {
-  console.log(data);
   let template = `
   <div class="releaseDate">
   <h3>${data.title}</h3> 
